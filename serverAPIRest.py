@@ -8,12 +8,13 @@ app = Flask(__name__)
 
 
 
-@app.route("/flaskServer/testEndpoint", methods=["POST"])
-def message_actions():
+@app.route("/flaskServer", methods=["POST"])
+def flaskServer():
 
     # Parse the request payload
     form_json = json.loads(request.form["payload"])
 
+    print ("aaaa")
     print(form_json)
 
     return make_response("", 200)
