@@ -12,12 +12,9 @@ app = Flask(__name__)
 def flaskServer():
 
     content = request.get_json(silent=False)
-    
-    print ("Petición: " + request.method)
-    print ("Body: " + str(content))
 
-    # print ("Headers: "+ request.headers)
-
+    logging.debug("Received event: " + json.dumps(content, indent=2))
+    logging.debug ("Method: " + request.method)
 
     return '{ "return": "all right!!!" }', 200
 
