@@ -8,8 +8,8 @@ from flask import Flask, jsonify, request, json, Response, make_response
 app = Flask(__name__)   
 
 
-@app.route('/goodMorning', methods=['POST'])
-def goodMorning():
+@app.route('/flaskServer', methods=['POST'])
+def flaskServer():
 
     content = request.get_json(silent=False)
     
